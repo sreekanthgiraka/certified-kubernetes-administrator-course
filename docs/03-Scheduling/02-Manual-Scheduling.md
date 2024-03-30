@@ -27,9 +27,12 @@ In this section, we will take a look at **`Manually Scheduling`** a **`POD`** on
 ## No Scheduler
   - You can manually assign pods to node itself. Well without a scheduler, to schedule pod is to set **`nodeName`** property in your pod definition file while creating a pod.
 
-    For already existing pod to assign a node we need use binding object.
+
     
     ![sc2](../../images/sc2.PNG)
+
+In above example we have mentioned node name while creating the pod itself.
+For already existing pod to assign a node we need use binding object.
     
   - Another way
     ```
@@ -42,6 +45,7 @@ In this section, we will take a look at **`Manually Scheduling`** a **`POD`** on
       kind: Node
       name: node02
     ```
+
     ```
     apiVersion: v1
     kind: Pod
